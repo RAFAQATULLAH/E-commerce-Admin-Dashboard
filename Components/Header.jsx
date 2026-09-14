@@ -9,13 +9,18 @@ function IconButton({ icon }) {
   );
 }
 
-export default function Header() {
+export default function Header({ onMobileMenuClick }) {
   return (
     <header className="h-20 flex items-center justify-between px-6 bg-[#111936]">
       <div className="flex items-center gap-4">
-        <button className="p-2 bg-purple-600/20 text-purple-400 rounded-lg hover:bg-purple-600/30">
+        {/* Mobile Menu Button - Shown only on small screens */}
+        <button
+          onClick={onMobileMenuClick}
+          className="p-2 bg-purple-600/20 text-purple-400 rounded-lg hover:bg-purple-600/30 md:hidden"
+        >
           <Menu size={20} />
         </button>
+
         <div className="relative hidden md:block">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
           <input 
