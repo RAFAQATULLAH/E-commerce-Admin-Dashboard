@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import DataTable from "@/components/DataTable";
+import DataTable from "@/Components/DataTable";
 import {
   Users,
   UserCheck,
